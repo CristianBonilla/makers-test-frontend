@@ -9,8 +9,8 @@ import './utils/datepicker.utils';
 
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
-import loadIcons from './utils/icons/icons.utils';
 import App from './pages/App';
+import loadIcons from './utils/icons/icons.utils';
 
 loadIcons();
 

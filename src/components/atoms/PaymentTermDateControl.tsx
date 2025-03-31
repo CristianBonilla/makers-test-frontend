@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-datepicker';
 import { Controller } from 'react-hook-form';
-import { PaymentTermDateProps } from '../../lib/types/payment-term-date.types';
+import type { PaymentTermDateProps } from '../../lib/types/payment-term-date.types';
 import FontIcon from './FontIcon';
 
 function PaymentTermDateControl({ control }: PaymentTermDateProps) {

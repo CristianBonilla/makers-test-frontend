@@ -2,7 +2,7 @@ import { MouseEvent, use, useEffect, useRef } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router';
 import { NavContext } from '../../contexts/NavContext';
-import { NavItemProps } from '../../lib/types/nav.types';
+import type { NavItemProps } from '../../lib/types/nav.types';
 import FontIcon from './FontIcon';
 
 function NavItem({ iconProps, disabled, children, ...navLinkProps }: NavItemProps) {

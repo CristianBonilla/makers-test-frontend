@@ -1,19 +1,20 @@
 export {
-  faBriefcase,
-  faHome,
-  faSignOutAlt,
-  faAlignRight,
   faAlignJustify,
-  faUsers,
-  faPaperPlane,
+  faAlignRight,
+  faBriefcase,
   faCalendarDays,
   faCircleCheck,
   faCircleRight,
-  faRectangleXmark
+  faHome,
+  faPaperPlane,
+  faRectangleXmark,
+  faSignOutAlt,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons';
 
 export {
-  faUserCircle,
   faBell,
-  faNewspaper
+  faNewspaper,
+  faUserCircle
 } from '@fortawesome/free-regular-svg-icons';
+

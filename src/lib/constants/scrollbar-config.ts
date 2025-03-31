@@ -1,4 +1,4 @@
-import { ScrollbarOptions } from '../types/scrollbar.types';
+import type { ScrollbarOptions } from '../types/scrollbar.types';
 
 export const SCROLLBAR_OPTIONS = Object.freeze<ScrollbarOptions>({
   overflow: {

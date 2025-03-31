@@ -1,9 +1,9 @@
 import Badge from 'react-bootstrap/Badge';
 import userProfileImg from '../../assets/images/user-profile.png';
+import type { ScrollbarOptions } from '../../lib/types/scrollbar.types';
 import Nav from '../atoms/Nav';
 import NavItem from '../atoms/NavItem';
 import Scrollbar from '../atoms/Scrollbar';
-import { ScrollbarOptions } from '../../lib/types/scrollbar.types';
 
 function SidebarWrapperLayout() {
   const scrollbarOptions: ScrollbarOptions = {

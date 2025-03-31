@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { UserRegisterRequest, UserRegisterRequestExtended } from '../../lib/interfaces/auth.interface';
+import type { SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import type { UserRegisterRequest, UserRegisterRequestExtended } from '../../lib/interfaces/user.interface';
 
 function Register() {
   const { register, handleSubmit, setFocus, formState: { errors }, watch } = useForm<UserRegisterRequestExtended>({

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import CurrencyInput from 'react-currency-input-field';
 import { Controller } from 'react-hook-form';
-import { AmountProps } from '../../lib/types/amount.types';
+import type { AmountProps } from '../../lib/types/amount.types';
 
 function AmountControl({ control }: AmountProps) {
   const [isBlur, setIsBlur] = useState<boolean>(false);

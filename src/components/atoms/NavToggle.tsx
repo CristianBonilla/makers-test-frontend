@@ -1,7 +1,7 @@
 import Navbar from 'react-bootstrap/Navbar';
 import { useLocation } from 'react-router';
 import useLayer from '../../lib/hooks/useLayer';
-import { ToggleSidebarProps } from '../../lib/types/toggle-sidebar.types';
+import type { ToggleSidebarProps } from '../../lib/types/toggle-sidebar.types';
 
 function NavToggle({ toggleSidebar, ref }: ToggleSidebarProps) {
   const { visibleSidebar, useInitializer, handleDisplaySidebar, handleHideSidebar } = useLayer(toggleSidebar);

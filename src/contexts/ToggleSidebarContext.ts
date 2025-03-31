@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-import { ToggleSidebarContextInfo } from '../lib/interfaces/toggle-sidebar.interface';
+import type { ToggleSidebarContextInfo } from '../lib/interfaces/ui/toggle-sidebar.interface';
 
 export const ToggleSidebarContext = createContext<ToggleSidebarContextInfo | null>(null);

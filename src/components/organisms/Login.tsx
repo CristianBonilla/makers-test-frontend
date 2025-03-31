@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { LoginRequest } from '../../lib/interfaces/auth.interface';
+import type { SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import type { LoginRequest } from '../../lib/interfaces/auth.interface';
 
 function Login() {
   const { register, handleSubmit, setFocus, formState: { errors } } = useForm<LoginRequest>({

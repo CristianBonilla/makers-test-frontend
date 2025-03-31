@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router';
 import { activeMatchingLinks, resetActiveItem } from '../helpers/nav-links.helper';
-import { NavContextInfo } from '../interfaces/nav.interface';
+import type { NavContextInfo } from '../interfaces/ui/nav.interface';
 
 function useActive(navContextInfo: NavContextInfo, searchMatchingLinks = true) {
   const memoizedNavContext = useMemo<NavContextInfo>(() => navContextInfo, [navContextInfo]);

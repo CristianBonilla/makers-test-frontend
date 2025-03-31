@@ -2,8 +2,8 @@ import { useMemo, useState } from 'react';
 import { Nav as NavWrapper } from 'react-bootstrap';
 import { NavContext } from '../../contexts/NavContext';
 import useActiveLinks from '../../lib/hooks/useActiveLinks';
-import { NavContextInfo, NavItemInfo } from '../../lib/interfaces/nav.interface';
-import { NavProps } from '../../lib/types/nav.types';
+import type { NavContextInfo, NavItemInfo } from '../../lib/interfaces/ui/nav.interface';
+import type { NavProps } from '../../lib/types/nav.types';
 
 function Nav({ children, ...navProps }: NavProps) {
   const navRef = useActiveLinks();

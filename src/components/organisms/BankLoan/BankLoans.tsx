@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
-import Scrollbar from '../../atoms/Scrollbar';
 import FontIcon from '../../atoms/FontIcon';
+import Scrollbar from '../../atoms/Scrollbar';
 
 function BankLoans() {
   return (

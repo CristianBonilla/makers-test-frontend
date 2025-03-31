@@ -1,4 +1,5 @@
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import type { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function FontIcon(fontProps: FontAwesomeIconProps) {
   return (

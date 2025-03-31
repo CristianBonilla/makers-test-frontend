@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Location } from 'react-router';
+import type { Location } from 'react-router';
 import { getTransitionDuration } from '../helpers/css.helper';
-import { ToggleSidebar } from '../interfaces/toggle-sidebar.interface';
+import type { ToggleSidebar } from '../interfaces/ui/toggle-sidebar.interface';
 
 function useLayer({ $toggle, $sidebar }: ToggleSidebar) {
   const [visibleSidebar, setVisibleSidebar] = useState(false);

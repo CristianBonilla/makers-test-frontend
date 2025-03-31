@@ -5,7 +5,7 @@ import FooterLayout from '../components/templates/FooterLayout';
 import NavbarLayout from '../components/templates/NavbarLayout';
 import SidebarLayout from '../components/templates/SidebarLayout';
 import { ToggleSidebarContext } from '../contexts/ToggleSidebarContext';
-import { ToggleSidebarContextInfo } from '../lib/interfaces/toggle-sidebar.interface';
+import type { ToggleSidebarContextInfo } from '../lib/interfaces/ui/toggle-sidebar.interface';
 
 function HomePage() {
   document.body.classList.add('sidebar-mini');

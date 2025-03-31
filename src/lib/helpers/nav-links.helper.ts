@@ -1,4 +1,4 @@
-import { NavItemInfo } from '../interfaces/nav.interface';
+import type { NavItemInfo } from '../interfaces/ui/nav.interface';
 
 export function getLinks($nav: HTMLUListElement) {
   const $links = [...$nav.querySelectorAll<HTMLAnchorElement>('li>a')];
