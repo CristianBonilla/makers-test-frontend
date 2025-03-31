@@ -1,4 +1,4 @@
-.table-container {
+.table__container {
 
   h4,
   h5 {
@@ -6,13 +6,14 @@
   }
 
   .table {
+    min-width: 567.33px;
 
     thead th,
     tbody th,
     tbody td {
       vertical-align: middle;
 
-      &:not(.table-actions) {
+      &:not(.table__actions) {
         max-width: 180px;
       }
 
@@ -29,7 +30,7 @@
     }
   }
 
-  .table-actions {
+  .table__actions {
 
     &__content {
       display: flex;
@@ -52,7 +53,7 @@
 }
 
 @media (max-width: 767px) {
-  .table-container {
+  .table__container {
 
     caption {
       display: none;
