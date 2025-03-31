@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-datepicker';
+import FontIcon from './FontIcon';
 
 function PaymentTermDate() {
   const minDate = new Date();
@@ -14,7 +15,9 @@ function PaymentTermDate() {
       minDate={minDate}
       onChange={date => !!date && setDate(date)}
       customInput={<Form.Control type='text' style={{ cursor: 'default' }} />}
-      onKeyDown={event => event.preventDefault()} />
+      onKeyDown={event => event.preventDefault()}
+      showIcon
+      icon={<FontIcon icon={['fas', 'calendar-days']} />} />
   );
 }
 

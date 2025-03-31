@@ -106,10 +106,6 @@ button.btn {
   outline: none;
 }
 
-.font-icon {
-  display: inline-block;
-}
-
 .react-datepicker {
 
   &-wrapper {
@@ -118,5 +114,16 @@ button.btn {
 
   &-popper {
     z-index: 12 !important;
+  }
+
+  &__view-calendar-icon  {
+
+    .font-icon {
+      font-size: 1.2em;
+    }
+
+    input {
+      padding: 6px 10px 5px 35px !important;
+    }
   }
 }

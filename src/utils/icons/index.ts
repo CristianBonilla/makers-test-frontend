@@ -5,7 +5,8 @@ export {
   faAlignRight,
   faAlignJustify,
   faUsers,
-  faPaperPlane
+  faPaperPlane,
+  faCalendarDays
 } from '@fortawesome/free-solid-svg-icons';
 
 export {
