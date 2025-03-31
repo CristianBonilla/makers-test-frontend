@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import CurrencyInput from 'react-currency-input-field';
 import { Controller } from 'react-hook-form';
 import { AmountProps } from '../../lib/types/amount.types';
 
 function AmountControl({ control }: AmountProps) {
+  const [isBlur, setIsBlur] = useState<boolean>(false);
+
   return (
     <Controller
       name='amount'
@@ -24,6 +27,7 @@ function AmountControl({ control }: AmountProps) {
           type='text'
           placeholder='Monto'
           defaultValue={0}
+          value={value}
           allowDecimals={false}
           allowNegativeValue={false}
           maxLength={12}
@@ -31,7 +35,9 @@ function AmountControl({ control }: AmountProps) {
           prefix='$'
           isInvalid={invalid}
           isValid={!invalid && !!value}
-          onValueChange={amount => onChange(amount ? parseInt(amount, 10) : undefined)}
+          onValueChange={amount => !isBlur && onChange(amount ? parseInt(amount, 10) : undefined)}
+          onFocusCapture={() => setIsBlur(false)}
+          onBlurCapture={() => setIsBlur(true)}
           {...rest} />
       )} />
   );
