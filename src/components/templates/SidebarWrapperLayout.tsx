@@ -16,20 +16,14 @@ function SidebarWrapperLayout() {
         </div>
       </div>
       <Nav>
-        <NavItem iconProps={{ icon: ['far', 'newspaper'], size: '2x' }} to='/home/news' end>
-          <p>Noticias<Badge bg='success'>¡Nuevo!</Badge></p>
+        <NavItem iconProps={{ icon: ['fas', 'briefcase'], size: '2x' }} to='/home/application' end>
+          <p>Solicitar préstamo</p>
         </NavItem>
-        <NavItem iconProps={{ icon: ['fas', 'user-shield'], size: '2x' }} to='/home' end>
-          <p>Roles</p>
+        <NavItem iconProps={{ icon: ['far', 'newspaper'], size: '2x' }} to='/home/bank-loans' end>
+          <p>Mis préstamos<Badge bg='success'>¡Nuevo!</Badge></p>
         </NavItem>
-        <NavItem iconProps={{ icon: ['fas', 'users'], size: '2x' }} to='/home' end>
-          <p>Usuarios</p>
-        </NavItem>
-        <NavItem iconProps={{ icon: ['fas', 'briefcase'], size: '2x' }} to='/home' end>
-          <p>Almacenamiento</p>
-        </NavItem>
-        <NavItem iconProps={{ icon: ['fas', 'clock'], size: '2x' }} to='/home' end>
-          <p>Historial</p>
+        <NavItem iconProps={{ icon: ['fas', 'users'], size: '2x' }} to='/home/manage-bank-loans' end>
+          <p>Gestionar solicitudes</p>
         </NavItem>
       </Nav>
     </Scroll>

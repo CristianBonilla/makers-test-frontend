@@ -44,7 +44,7 @@ function NavbarLayout() {
             <NavItem iconProps={{ icon: ['far', 'bell'], size: '2x' }} to='/home' end disabled>
               <p>Notificaciones</p>
             </NavItem>
-            <NavItem iconProps={{ icon: ['fas', 'sign-out-alt'], size: '2x' }} to='/home' end disabled>
+            <NavItem iconProps={{ icon: ['fas', 'sign-out-alt'], size: '2x' }} to='/auth' end>
               <p>Cerrar sesión&ensp;</p>
             </NavItem>
           </Nav>
