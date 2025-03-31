@@ -91,6 +91,15 @@ export default tseslint.config(
           caughtErrorsIgnorePattern: '^_'
         }
       ],
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+          "checksVoidReturn": {
+            "arguments": false,
+            "attributes": false
+          }
+        }
+      ],
       '@typescript-eslint/array-type': 'off',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-member-accessibility': [

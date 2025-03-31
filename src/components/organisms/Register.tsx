@@ -8,7 +8,7 @@ function Register() {
       <div className="register__wrap">
         <h2 className='text-secondary-emphasis text-start'>Registrarse</h2>
         <Form noValidate autoComplete='off' spellCheck='false'>
-          <Form.Group className='mb-3' controlId='identification-document'>
+          <Form.Group className='mb-3' controlId='document-number'>
             <Form.Label>Documento de identificación</Form.Label>
             <Form.Control type='text' placeholder='Documento de identificación'/>
           </Form.Group>
