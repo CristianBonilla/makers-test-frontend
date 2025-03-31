@@ -28,6 +28,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@popperjs/core": "^2.11.8",
+    "@redux-devtools/extension": "^3.3.0",
     "bootstrap": "^5.3.3",
     "date-fns": "^4.1.0",
     "overlayscrollbars": "^2.11.1",
@@ -38,7 +39,9 @@
     "react-datepicker": "^8.2.1",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
-    "react-router": "^7.4.0"
+    "react-redux": "^9.2.0",
+    "react-router": "^7.4.0",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
