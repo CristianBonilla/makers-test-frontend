@@ -24,7 +24,7 @@ export interface UserResponse extends User {
   created: Date;
 }
 
-export interface UserResult {
+export interface UsersResult {
   role: RoleResponse;
   users: UserResponse[];
 }
