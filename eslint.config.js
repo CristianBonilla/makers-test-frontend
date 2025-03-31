@@ -161,7 +161,7 @@ export default tseslint.config(
       'max-len': [
         'warn',
         {
-          code: 140
+          code: 170
         }
       ],
       'no-console': [
