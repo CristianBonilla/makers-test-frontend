@@ -1,0 +1,46 @@
+@use 'bootstrap/scss/bootstrap-utilities';
+
+@mixin sidebar-theme() {
+  @if $sidebar-theme == 'dark' {
+    @extend .bg-dark;
+  } @else if $sidebar-theme == 'light' {
+    @extend .bg-light;
+  } @else {
+    background-color: $white-color;
+  }
+}
+
+@mixin sidebar-title-theme() {
+  @if $sidebar-theme == 'dark' {
+    @extend .text-light;
+  } @else {
+    color: $black-color;
+  }
+}
+
+@mixin sidebar-text-theme($isActive: false) {
+  @if $sidebar-theme == 'dark' {
+    @if $isActive {
+      @extend .text-light;
+    } @else {
+      @extend .text-white-50;
+    }
+  } @else {
+    @if $isActive {
+      @extend .text-light;
+    } @else {
+      color: $black-color;
+    }
+  }
+}
+
+@mixin sidebar-minimize-theme() {
+  @if $sidebar-theme == 'dark' {
+    @extend .text-secondary-emphasis;
+    @extend .border;
+    @extend .border-light;
+  } @else {
+    color: #888888;
+    border: 1px solid #888888;
+  }
+}

@@ -1,0 +1,52 @@
+.sidebar {
+  @include sidebar-theme;
+
+  &_logo {
+
+    &-text {
+      @include sidebar-title-theme;
+    }
+
+    &-minimize {
+
+      button {
+        @include sidebar-minimize-theme;
+      }
+
+      .visible-on-mini,
+      .visible-on-regular {
+        @include sidebar-title-theme;
+      }
+    }
+  }
+
+  &_user {
+
+    &-info {
+
+      p {
+        @include sidebar-title-theme;
+      }
+    }
+  }
+
+  &_wrapper {
+
+    .nav {
+
+      .nav-item.active {
+
+        p {
+          @include sidebar-text-theme(true);
+        }
+      }
+
+      .nav-item:not(.active) {
+
+        p {
+          @include sidebar-text-theme;
+        }
+      }
+    }
+  }
+}

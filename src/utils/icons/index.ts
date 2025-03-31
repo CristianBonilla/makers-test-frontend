@@ -1,0 +1,21 @@
+export {
+  faBriefcase,
+  faClock,
+  faHome,
+  faSignOutAlt,
+  faAlignRight,
+  faAlignJustify,
+  faPlusCircle,
+  faTimes,
+  faSpinner,
+  faUsers,
+  faUserCheck,
+  faUserShield
+} from '@fortawesome/free-solid-svg-icons';
+
+export {
+  faUserCircle,
+  faBell,
+  faNewspaper,
+  faEye
+} from '@fortawesome/free-regular-svg-icons';
