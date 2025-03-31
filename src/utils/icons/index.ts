@@ -4,7 +4,8 @@ export {
   faSignOutAlt,
   faAlignRight,
   faAlignJustify,
-  faUsers
+  faUsers,
+  faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
 
 export {

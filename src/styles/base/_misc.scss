@@ -105,3 +105,18 @@ button.btn {
 .modal .close {
   outline: none;
 }
+
+.font-icon {
+  display: inline-block;
+}
+
+.react-datepicker {
+
+  &-wrapper {
+    width: 100%;
+  }
+
+  &-popper {
+    z-index: 12 !important;
+  }
+}

@@ -5,6 +5,8 @@ import '@/styles/main.scss';
 import '@popperjs/core/dist/umd/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
+import './utils/datepicker.utils';
+
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
 import loadIcons from './utils/icons/icons.utils';
