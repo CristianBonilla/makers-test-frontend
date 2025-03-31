@@ -11,8 +11,8 @@ function Register() {
   });
   const passwordRef = useRef<string>(null);
   passwordRef.current = watch('password');
-  const roleIdControl = register('roleId');
-  const documentNumberControl = register('documentNumber', {
+  const roleIdField = register('roleId');
+  const documentNumberField = register('documentNumber', {
     required: {
       message: 'El documento de identificación es requerido',
       value: true
@@ -26,7 +26,7 @@ function Register() {
       value: /^\d*$/
     }
   });
-  const mobileControl = register('mobile', {
+  const mobileField = register('mobile', {
     required: {
       message: 'El número telefónico es requerido',
       value: true
@@ -36,7 +36,7 @@ function Register() {
       value: /^\+\d{1,3}\s?\d{10}$/
     }
   });
-  const usernameControl = register('username', {
+  const usernameField = register('username', {
     required: {
       message: 'El nombre de usuario es requerido',
       value: true
@@ -56,7 +56,7 @@ function Register() {
       characters: username => /[^A-Za-z\d]/.test(username) || 'El nombre de usuario debe tener al menos un símbolo especial'
     }
   });
-  const passwordControl = register('password', {
+  const passwordField = register('password', {
     required: {
       message: 'La contraseña es requerida',
       value: true
@@ -73,7 +73,7 @@ function Register() {
       characters: username => /[^A-Za-z\d]/.test(username) || 'La contraseña debe tener al menos un símbolo especial'
     }
   });
-  const confirmPasswordControl = register('confirmPassword', {
+  const confirmPasswordField = register('confirmPassword', {
     validate(password) {
       if (errors.password || !passwordRef.current) {
         return true;
@@ -82,7 +82,7 @@ function Register() {
       return password === passwordRef.current || 'Las contraseñas no coinciden';
     }
   });
-  const emailControl = register('email', {
+  const emailField = register('email', {
     required: {
       message: 'El correo es requerido',
       value: true
@@ -96,7 +96,7 @@ function Register() {
       value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     }
   });
-  const firstnameControl = register('firstname', {
+  const firstnameField = register('firstname', {
     required: {
       message: 'Los nombres son requeridos',
       value: true
@@ -114,7 +114,7 @@ function Register() {
       value: /^[A-Za-z\s]+$/
     }
   });
-  const lastnameControl = register('lastname', {
+  const lastnameField = register('lastname', {
     required: {
       message: 'Los apellidos son requeridos',
       value: true
@@ -144,11 +144,11 @@ function Register() {
       <div className="register__wrap">
         <h2 className='text-secondary-emphasis text-start'>Registrarse</h2>
         <Form noValidate autoComplete='off' spellCheck='false' onSubmit={handleSubmit(onRegister)}>
-          <Form.Control {...roleIdControl} type='hidden' />
+          <Form.Control {...roleIdField} type='hidden' />
           <Form.Group className='mb-3' controlId='document-number'>
             <Form.Label>Documento de identificación</Form.Label>
             <Form.Control
-              {...documentNumberControl}
+              {...documentNumberField}
               type='text'
               placeholder='Documento de identificación'
               isInvalid={!!errors.documentNumber} />
@@ -157,7 +157,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='mobile'>
             <Form.Label>Número telefónico</Form.Label>
             <Form.Control
-              {...mobileControl}
+              {...mobileField}
               type='text'
               placeholder='Número telefónico'
               isInvalid={!!errors.mobile} />
@@ -166,7 +166,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='username'>
             <Form.Label>Nombre de usuario</Form.Label>
             <Form.Control
-              {...usernameControl}
+              {...usernameField}
               type='text'
               placeholder='Nombre de usuario'
               isInvalid={!!errors.username} />
@@ -175,7 +175,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='password'>
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
-              {...passwordControl}
+              {...passwordField}
               type='password'
               placeholder='Contraseña'
               isInvalid={!!errors.password} />
@@ -184,7 +184,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='confirm-password'>
             <Form.Label>Confirmar contraseña</Form.Label>
             <Form.Control
-              {...confirmPasswordControl}
+              {...confirmPasswordField}
               type='password'
               placeholder='Confirmar contraseña'
               isInvalid={!!errors.confirmPassword} />
@@ -193,7 +193,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='email'>
             <Form.Label>Correo</Form.Label>
             <Form.Control
-              {...emailControl}
+              {...emailField}
               type='text'
               placeholder='Correo electrónico'
               isInvalid={!!errors.email} />
@@ -202,7 +202,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='firstname'>
             <Form.Label>Nombres</Form.Label>
             <Form.Control
-              {...firstnameControl}
+              {...firstnameField}
               type='text'
               placeholder='Nombres'
               isInvalid={!!errors.firstname} />
@@ -211,7 +211,7 @@ function Register() {
           <Form.Group className='mb-3' controlId='lastname'>
             <Form.Label>Apellidos</Form.Label>
             <Form.Control
-              {...lastnameControl}
+              {...lastnameField}
               type='text'
               placeholder='Apellidos'
               isInvalid={!!errors.lastname} />

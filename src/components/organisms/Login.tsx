@@ -9,13 +9,13 @@ function Login() {
   const { register, handleSubmit, setFocus, formState: { errors } } = useForm<LoginRequest>({
     mode: 'onChange'
   });
-  const usernameOrEmailControl = register('usernameOrEmail', {
+  const usernameOrEmailField = register('usernameOrEmail', {
     required: {
       message: 'El nombre de usuario o email es requerido',
       value: true
     }
   });
-  const passwordControl = register('password', {
+  const passwordField = register('password', {
     required: {
       message: 'La contraseña es requerida',
       value: true
@@ -36,12 +36,12 @@ function Login() {
         <Form noValidate autoComplete='off' spellCheck='false' onSubmit={handleSubmit(onLogin)}>
           <Form.Group className='mb-3' controlId='username-or-email'>
             <Form.Label>Usuario o Email</Form.Label>
-            <Form.Control {...usernameOrEmailControl} type='text' placeholder='Usuario o Email' isInvalid={!!errors.usernameOrEmail} />
+            <Form.Control {...usernameOrEmailField} type='text' placeholder='Usuario o Email' isInvalid={!!errors.usernameOrEmail} />
             <Form.Control.Feedback type='invalid'>{ errors.usernameOrEmail?.message }</Form.Control.Feedback>
           </Form.Group>
           <Form.Group className='mb-3' controlId='password'>
             <Form.Label>Contraseña</Form.Label>
-            <Form.Control {...passwordControl} type='password' placeholder='Contraseña' isInvalid={!!errors.password} />
+            <Form.Control {...passwordField} type='password' placeholder='Contraseña' isInvalid={!!errors.password} />
             <Form.Control.Feedback type='invalid'>{ errors.password?.message }</Form.Control.Feedback>
           </Form.Group>
           <div className='d-flex align-items-start align-items-sm-center flex-column flex-sm-row justify-content-sm-between w-100'>

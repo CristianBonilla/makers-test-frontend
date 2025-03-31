@@ -13,7 +13,7 @@ function Application() {
   const { control, register, handleSubmit, setFocus, formState: { errors } } = useForm<Partial<BankLoanRequest>>({
     mode: 'onChange'
   });
-  const userIdControl = register('userId');
+  const userIdField = register('userId');
   const onSend: SubmitHandler<Partial<BankLoanRequest>> = (data) => {
     console.log(data);
   };
@@ -28,7 +28,7 @@ function Application() {
           <Card.Title as='h3'>Solicitar Préstamo</Card.Title>
           <Card.Subtitle className='mb-3 text-body-tertiary'>Ingrese el monto que desea solicitar</Card.Subtitle>
           <Form noValidate autoComplete='off' spellCheck='false' onSubmit={handleSubmit(onSend)}>
-            <Form.Control {...userIdControl} type='hidden' />
+            <Form.Control {...userIdField} type='hidden' />
             <Form.Group className='mb-3' controlId='amount'>
               <Form.Label>Monto</Form.Label>
               <AmountControl control={control} />
