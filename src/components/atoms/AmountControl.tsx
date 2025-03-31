@@ -24,7 +24,6 @@ function AmountControl({ control }: AmountProps) {
           type='text'
           placeholder='Monto'
           defaultValue={0}
-          value={value}
           allowDecimals={false}
           allowNegativeValue={false}
           maxLength={12}

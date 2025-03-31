@@ -1,20 +1,25 @@
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { BankLoan } from '../../../lib/interfaces/bank-loan.interface';
+import { BankLoanRequest } from '../../../lib/interfaces/bank-loan.interface';
 import AmountControl from '../../atoms/AmountControl';
 import FontIcon from '../../atoms/FontIcon';
 import PaymentTermDateControl from '../../atoms/PaymentTermDateControl';
 
 function Application() {
-  const { control, register, handleSubmit, formState: { errors } } = useForm<Partial<BankLoan>>({
-    mode: 'all'
+  const { control, register, handleSubmit, setFocus, formState: { errors } } = useForm<Partial<BankLoanRequest>>({
+    mode: 'onChange'
   });
-  const onSend: SubmitHandler<Partial<BankLoan>> = (data) => {
+  const userIdControl = register('userId');
+  const onSend: SubmitHandler<Partial<BankLoanRequest>> = (data) => {
     console.log(data);
   };
+  useEffect(() => {
+    setFocus('amount');
+  }, [setFocus]);
 
   return (
     <Container fluid className='px-1 px-sm-2 px-lg-3'>
@@ -23,7 +28,7 @@ function Application() {
           <Card.Title as='h3'>Solicitar Préstamo</Card.Title>
           <Card.Subtitle className='mb-3 text-body-tertiary'>Ingrese el monto que desea solicitar</Card.Subtitle>
           <Form noValidate autoComplete='off' spellCheck='false' onSubmit={handleSubmit(onSend)}>
-            <Form.Control type='hidden' {...register('userId')} />
+            <Form.Control {...userIdControl} type='hidden' />
             <Form.Group className='mb-3' controlId='amount'>
               <Form.Label>Monto</Form.Label>
               <AmountControl control={control} />

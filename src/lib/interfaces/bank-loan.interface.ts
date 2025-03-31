@@ -1,4 +1,4 @@
-export interface BankLoan {
+export interface BankLoanRequest {
   userId: string;
   amount: number;
   paymentTerm: Date;

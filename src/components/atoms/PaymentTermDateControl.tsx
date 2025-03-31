@@ -21,7 +21,7 @@ function PaymentTermDateControl({ control }: PaymentTermDateProps) {
       }}
       render={({ field: { onChange, value, ...rest } }) => (
         <DatePicker
-          selected={value}
+          selected={value as Date}
           dateFormat='d MMMM, yyyy'
           minDate={minDate}
           customInput={<Form.Control type='text' style={{ cursor: 'default' }} />}

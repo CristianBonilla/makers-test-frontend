@@ -1,6 +1,6 @@
 import { Control } from 'react-hook-form';
-import { BankLoan } from '../interfaces/bank-loan.interface';
+import { BankLoanRequest } from '../interfaces/bank-loan.interface';
 
 export type AmountProps = {
-  control: Control<Partial<BankLoan>, any, Partial<BankLoan>>;
+  control: Control<Partial<BankLoanRequest>, any, Partial<BankLoanRequest>>;
 };
