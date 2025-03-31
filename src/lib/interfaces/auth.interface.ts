@@ -13,3 +13,7 @@ export interface UserRegisterRequest {
   firstname: string;
   lastname: string;
 }
+
+export interface UserRegisterRequestExtended extends UserRegisterRequest {
+  confirmPassword: string;
+}

@@ -1,14 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { UserRegisterRequest } from '../../lib/interfaces/auth.interface';
+import { UserRegisterRequest, UserRegisterRequestExtended } from '../../lib/interfaces/auth.interface';
 
 function Register() {
-  const { register, handleSubmit, setFocus, formState: { errors } } = useForm<UserRegisterRequest>({
+  const { register, handleSubmit, setFocus, formState: { errors }, watch } = useForm<UserRegisterRequestExtended>({
     mode: 'onChange'
   });
+  const passwordRef = useRef<string>(null);
+  passwordRef.current = watch('password');
   const roleIdControl = register('roleId');
   const documentNumberControl = register('documentNumber', {
     required: {
@@ -69,6 +71,15 @@ function Register() {
       numbers: username => /\d/.test(username) || 'La contraseña debe tener al menos un número',
       noBlankSpaces: username => /^\S+$/.test(username) || 'La contraseña no debe tener espacios en blanco',
       characters: username => /[^A-Za-z\d]/.test(username) || 'La contraseña debe tener al menos un símbolo especial'
+    }
+  });
+  const confirmPasswordControl = register('confirmPassword', {
+    validate(password) {
+      if (errors.password || !passwordRef.current) {
+        return true;
+      }
+
+      return password === passwordRef.current || 'Las contraseñas no coinciden';
     }
   });
   const emailControl = register('email', {
@@ -173,8 +184,11 @@ function Register() {
           <Form.Group className='mb-3' controlId='confirm-password'>
             <Form.Label>Confirmar contraseña</Form.Label>
             <Form.Control
+              {...confirmPasswordControl}
               type='password'
-              placeholder='Confirmar contraseña' />
+              placeholder='Confirmar contraseña'
+              isInvalid={!!errors.confirmPassword} />
+            <Form.Control.Feedback type='invalid'>{ errors.confirmPassword?.message }</Form.Control.Feedback>
           </Form.Group>
           <Form.Group className='mb-3' controlId='email'>
             <Form.Label>Correo</Form.Label>
