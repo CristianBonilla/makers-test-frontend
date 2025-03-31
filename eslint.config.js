@@ -144,6 +144,12 @@ export default tseslint.config(
       '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/unbound-method': 'off',
       '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/no-empty-object-type': [
+        'error',
+        {
+          allowInterfaces: 'with-single-extends'
+        }
+      ],
       'arrow-parens': ['off', 'as-needed'],
       'comma-dangle': [
         'warn',

@@ -1,7 +1,7 @@
-import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import type { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 import type { CSSProperties, ReactElement, ReactNode } from 'react';
 import type { NavProps as NavWrapperProps } from 'react-bootstrap';
-import { NavLinkProps } from 'react-router';
+import type { NavLinkProps } from 'react-router';
 import NavItem from '../../components/atoms/NavItem';
 
 export type NavChildren = ReactElement<NavItemProps, typeof NavItem>;

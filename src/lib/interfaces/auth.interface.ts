@@ -1,19 +1,13 @@
+import type { RoleResponse } from './role.interface';
+import type { UserResponse } from './user.interface';
+
 export interface LoginRequest {
   usernameOrEmail: string;
   password: string;
 }
 
-export interface UserRegisterRequest {
-  roleId: string;
-  documentNumber: string;
-  mobile: string;
-  username: string;
-  password: string;
-  email: string;
-  firstname: string;
-  lastname: string;
-}
-
-export interface UserRegisterRequestExtended extends UserRegisterRequest {
-  confirmPassword: string;
+export interface AuthResult {
+  token: string;
+  user: UserResponse;
+  role: RoleResponse;
 }

@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { ToggleSidebar } from '../interfaces/toggle-sidebar.interface';
+import type { DetailedHTMLProps, HTMLAttributes } from 'react';
+import type { ToggleSidebar } from '../interfaces/ui/toggle-sidebar.interface';
 
 export type ToggleSidebarProps = {
   toggleSidebar: ToggleSidebar;
