@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { AuthType } from '../../lib/enums/auth.enum';
-import Scroll from '../atoms/Scroll';
+import Scrollbar from '../atoms/Scrollbar';
 import Login from './Login';
 import Register from './Register';
 
@@ -26,9 +26,9 @@ function Auth() {
     <div className='auth'>
       <div className="auth__panel">
         {auth === AuthType.Register ? loginElement : registerElement}
-        <Scroll className={`auth__panel--container ${ auth === AuthType.Register ? 'auth__panel--right-log' : '' }`.trim()}>
+        <Scrollbar className={`auth__panel--container ${ auth === AuthType.Register ? 'auth__panel--right-log' : '' }`.trim()}>
           {auth === AuthType.Register ? <Register /> : <Login />}
-        </Scroll>
+        </Scrollbar>
       </div>
     </div>
   );

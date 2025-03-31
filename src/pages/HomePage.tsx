@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Outlet } from 'react-router';
-import Scroll from '../components/atoms/Scroll';
+import Scrollbar from '../components/atoms/Scrollbar';
 import FooterLayout from '../components/templates/FooterLayout';
 import NavbarLayout from '../components/templates/NavbarLayout';
 import SidebarLayout from '../components/templates/SidebarLayout';
@@ -19,7 +19,7 @@ function HomePage() {
   }), [$toggle, set$Toggle, $sidebar, set$Sidebar]);
 
   return (
-    <Scroll className='wrapper'>
+    <Scrollbar className='wrapper'>
       <ToggleSidebarContext value={memoizedToggleSidebarContext}>
         <SidebarLayout />
         <div className='main-panel'>
@@ -30,7 +30,7 @@ function HomePage() {
           <FooterLayout />
         </div>
       </ToggleSidebarContext>
-    </Scroll>
+    </Scrollbar>
   );
 }
 

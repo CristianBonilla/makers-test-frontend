@@ -1,6 +1,4 @@
-import type { PartialOptions } from 'overlayscrollbars';
-
-export type ScrollbarOptions = PartialOptions | false | null;
+import { ScrollbarOptions } from '../types/scrollbar.types';
 
 export const SCROLLBAR_OPTIONS = Object.freeze<ScrollbarOptions>({
   overflow: {
