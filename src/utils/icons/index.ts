@@ -7,7 +7,9 @@ export {
   faUsers,
   faPaperPlane,
   faCalendarDays,
-  faCircleRight
+  faCircleCheck,
+  faCircleRight,
+  faRectangleXmark
 } from '@fortawesome/free-solid-svg-icons';
 
 export {

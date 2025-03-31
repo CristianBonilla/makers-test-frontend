@@ -23,7 +23,7 @@ function Application() {
 
   return (
     <Container fluid className='px-1 px-sm-2 px-lg-3'>
-      <Card style={{ maxWidth: '30rem', width: '100%' }}>
+      <Card style={{ maxWidth: '26rem', width: '100%' }}>
         <Card.Body className='p-4'>
           <Card.Title as='h3'>Solicitar Préstamo</Card.Title>
           <Card.Subtitle className='mb-3 text-body-tertiary'>Ingrese el monto que desea solicitar</Card.Subtitle>
