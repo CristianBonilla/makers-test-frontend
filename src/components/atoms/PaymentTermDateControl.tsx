@@ -13,12 +13,6 @@ function PaymentTermDateControl({ control }: PaymentTermDateProps) {
       name='paymentTerm'
       control={control}
       defaultValue={minDate}
-      rules={{
-        required: {
-          message: 'El plazo de pago es requerido',
-          value: true
-        }
-      }}
       render={({ field: { onChange, value, ...rest } }) => (
         <DatePicker
           selected={value as Date}
