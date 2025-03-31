@@ -16,7 +16,8 @@
     margin: 10px;
     width: 100%;
     text-align: center;
-    background-color: rgba(20, 106, 236, 0.9);
+
+    @extend .bg-dark;
 
     &--container {
       background-color: rgba(255, 255, 255, 1);
@@ -25,6 +26,7 @@
       width: calc(100% - 20px);
       margin: 10px;
       box-shadow: 0 0 15px 5px #1c1c1c96;
+      border-radius: 6px;
 
       .register,
       .login {
@@ -58,7 +60,9 @@
         font-size: .9rem;
 
         @extend .text-sm-start;
+        @extend .link-danger;
         @extend .link-underline-light;
+        @extend .link-underline-opacity-0;
       }
 
       &#{$panel}--right-log {

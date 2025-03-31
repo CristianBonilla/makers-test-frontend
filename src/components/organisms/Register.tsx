@@ -6,7 +6,7 @@ function Register() {
   return (
     <Container className='register'>
       <div className="register__wrap">
-        <h2 className='text-secondary text-start'>Registrarse</h2>
+        <h2 className='text-secondary-emphasis text-start'>Registrarse</h2>
         <Form noValidate autoComplete='off' spellCheck='false'>
           <Form.Group className='mb-3' controlId='identification-document'>
             <Form.Label>Documento de identificación</Form.Label>
@@ -36,7 +36,7 @@ function Register() {
             <Form.Label>Apellidos</Form.Label>
             <Form.Control type='text' placeholder='Apellidos'/>
           </Form.Group>
-          <Button type='submit' variant='primary' size='lg'>Registrarse</Button>
+          <Button type='submit' variant='danger' size='lg'>Registrarse</Button>
         </Form>
       </div>
     </Container>

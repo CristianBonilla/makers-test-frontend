@@ -11,14 +11,14 @@ function Auth() {
     <div className='auth__panel--login'>
       <h2>¿Tienes una cuenta?</h2>
       <p>Accede e interactua con el panel administrativo para solicitar un préstamo.</p>
-      <Button variant='light' size='lg' onClick={() => setAuth(AuthType.Login)}>Iniciar Sesión</Button>
+      <Button variant='outline-light' onClick={() => setAuth(AuthType.Login)}>Iniciar Sesión</Button>
     </div>
   );
   const registerElement = (
     <div className='auth__panel--register'>
       <h2>¿No tienes una cuenta?</h2>
       <p>Has una solicitud de préstamo y nosotros te lo aprobamos.</p>
-      <Button variant='light' size='lg' onClick={() => setAuth(AuthType.Register)}>Registrarse</Button>
+      <Button variant='outline-light' onClick={() => setAuth(AuthType.Register)}>Registrarse</Button>
     </div>
   );
 

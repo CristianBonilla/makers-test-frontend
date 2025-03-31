@@ -6,7 +6,8 @@ function Login() {
   return (
     <Container className='login'>
       <div className='login__wrap'>
-        <h2 className='text-secondary text-start'>Iniciar Sesión</h2>
+        <h2 className='text-secondary-emphasis text-start'>Iniciar Sesión</h2>
+        <p className='text-body-tertiary'>Ingrese sus credenciales para acceder</p>
         <Form noValidate autoComplete='off' spellCheck='false'>
           <Form.Group className='mb-3' controlId='username-or-email'>
             <Form.Label>Usuario o Email</Form.Label>
@@ -20,7 +21,7 @@ function Login() {
             <a id='forgot-password' className='forgot-password mb-2 mb-sm-0' href="" onClick={event => event.preventDefault()}>
               Olvidaste la contraseña?
             </a>
-            <Button type='submit' variant='primary' size='lg'>Iniciar Sesión</Button>
+            <Button type='submit' variant='danger' size='lg'>Iniciar Sesión</Button>
           </div>
         </Form>
       </div>
