@@ -1,30 +1,22 @@
-import { useOverlayScrollbars } from 'overlayscrollbars-react';
-import { useEffect, useRef } from 'react';
+import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import { SCROLLBAR_OPTIONS } from '../../lib/constants/scrollbar-config';
-import { ScrollProps } from '../../lib/types/scroll.types';
+import { ScrollOptions, ScrollProps } from '../../lib/types/scroll.types';
 
 function Scroll({ theme = 'os-theme-dark', ...scrollProps }: ScrollProps) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [initialize] = useOverlayScrollbars({
-    options: {
-      ...SCROLLBAR_OPTIONS,
-      overflow: {
-        x: 'visible-hidden'
-      },
-      scrollbars: {
-        autoHide: 'move',
-        theme
-      }
+  const scrollOptions: ScrollOptions = {
+    ...SCROLLBAR_OPTIONS,
+    overflow: {
+      x: 'visible-hidden'
     },
-    defer: true
-  });
-  useEffect(() => {
-    if (wrapperRef.current) {
-      initialize(wrapperRef.current);
+    scrollbars: {
+      autoHide: 'move',
+      theme
     }
-  }, [initialize]);
+  };
 
-  return <div ref={wrapperRef} {...scrollProps}></div>;
+  return (
+    <OverlayScrollbarsComponent options={scrollOptions} defer {...scrollProps} />
+  );
 }
 
 export default Scroll;
