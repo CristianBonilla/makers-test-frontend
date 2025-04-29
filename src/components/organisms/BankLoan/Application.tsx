@@ -32,7 +32,7 @@ function Application() {
             <Form.Control {...userIdField} type='hidden' />
             <Form.Group className='mb-3' controlId='amount'>
               <Form.Label>Monto</Form.Label>
-              <AmountControl control={control} />
+              <AmountControl control={control} defaultAmount={0} />
               <Form.Control.Feedback type='invalid'>{ errors.amount?.message }</Form.Control.Feedback>
             </Form.Group>
             <Form.Group className='mb-3' controlId='paymentTerm'>

@@ -4,7 +4,7 @@ import CurrencyInput from 'react-currency-input-field';
 import { Controller } from 'react-hook-form';
 import type { AmountProps } from '../../lib/types/amount.types';
 
-function AmountControl({ control }: AmountProps) {
+function AmountControl({ control, defaultAmount }: AmountProps) {
   const [isBlur, setIsBlur] = useState<boolean>(false);
 
   return (
@@ -21,13 +21,13 @@ function AmountControl({ control }: AmountProps) {
           value: 1000000
         }
       }}
+      defaultValue={defaultAmount}
       render={({ field: { onChange, value, ...rest }, fieldState: { invalid } }) => (
         <Form.Control
           as={CurrencyInput}
           type='text'
           placeholder='Monto'
-          defaultValue={0}
-          value={value}
+          defaultValue={defaultAmount}
           allowDecimals={false}
           allowNegativeValue={false}
           maxLength={12}
