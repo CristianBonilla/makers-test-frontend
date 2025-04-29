@@ -19,7 +19,11 @@ function HomePage() {
   }), [$toggle, set$Toggle, $sidebar, set$Sidebar]);
 
   return (
-    <Scrollbar className='wrapper'>
+    <Scrollbar className='wrapper' options={{
+      overflow: {
+        x: 'visible-hidden'
+      }
+    }}>
       <ToggleSidebarContext value={memoizedToggleSidebarContext}>
         <SidebarLayout />
         <div className='main-panel'>
