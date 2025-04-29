@@ -1,0 +1,72 @@
+@import '../variables/bootstrap-variables';
+
+.list__group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  &--item {
+    flex-shrink: 0;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  &--footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: calc(map-get($grid-breakpoints, 'sm') - 107px)) and (max-width: map-get($grid-breakpoints, 'sm')) {
+  .list__group {
+
+    &--footer {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, 'md')) {
+  .list__group {
+    flex-direction: column;
+
+    &--item {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'sm')) and (max-width: calc(map-get($grid-breakpoints, 'md') - 1px)),
+  (min-width: map-get($grid-breakpoints, 'lg')) {
+  .list__group {
+
+    &--footer {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'md')) and (max-width: calc(map-get($grid-breakpoints, 'lg') - 162px)) {
+  body:not(.sidebar-mini) {
+
+    .list__group {
+      flex-direction: column;
+
+      &--item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'md')) and (max-width: calc(map-get($grid-breakpoints, 'lg') + 171px)) {
+  body:not(.sidebar-mini) {
+
+    .list__group {
+
+      &--footer {
+        flex-direction: column;
+      }
+    }
+  }
+}
