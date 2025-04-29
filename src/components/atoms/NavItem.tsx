@@ -1,4 +1,5 @@
-import { MouseEvent, use, useEffect, useRef } from 'react';
+import type { MouseEvent } from 'react';
+import { use, useEffect, useRef } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router';
 import { NavContext } from '../../contexts/NavContext';

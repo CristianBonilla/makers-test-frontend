@@ -68,9 +68,35 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       'n/no-missing-import': ['off'],
+      'n/no-unsupported-features/node-builtins': [
+        'error',
+        {
+          version: '>=16.0.0',
+          ignores: ['localStorage']
+        }
+      ],
       'import/no-deprecated': 'warn',
       'import/no-duplicates': 'error',
-      'import/order': 'warn',
+      'import/order': [
+        'warn',
+        {
+          named: true,
+          groups: [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'unknown'
+          ],
+          'newlines-between': 'ignore',
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          }
+        }
+      ],
       '@stylistic/array-bracket-spacing': [
         'off',
         'always',
@@ -83,6 +109,7 @@ export default tseslint.config(
       '@stylistic/ts/indent': ['off', 2],
       '@stylistic/ts/quotes': ['warn', 'single'],
       '@stylistic/ts/semi': ['warn', 'always'],
+      '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         {
